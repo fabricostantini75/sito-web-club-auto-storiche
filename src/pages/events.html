@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vintage Wheels Club - Eventi</title>
+    <link rel="stylesheet" href="../scss/style.scss">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <a href="../index.html" class="logo">Vintage Wheels Club</a>
+            <nav class="nav">
+                <button class="nav-toggle" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-list">
+                    <li><a href="../index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">Chi Siamo</a></li>
+                    <li><a href="gallery.html" class="nav-link">Galleria</a></li>
+                    <li><a href="events.html" class="nav-link active">Eventi</a></li>
+                    <li><a href="contact.html" class="nav-link">Contatti</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-hero bg-surface">
+            <div class="container">
+                <h1 class="page-title">I Nostri Eventi Esclusivi</h1>
+                <p class="page-subtitle">Raduni, mostre e tour per vivere la passione delle auto storiche.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Prossimi Appuntamenti</h2>
+                <p class="section-description">Non perdere l'occasione di partecipare ai nostri eventi. Iscriviti ora!</p>
+
+                <div class="events-list">
+                    <div class="event-item" id="event-1">
+                        <img src="https://images.pexels.com/photos/100656/pexels-photo-100656.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Raduno Estivo sul Lago" class="event-item-image">
+                        <div class="event-item-content">
+                            <h3>Raduno Estivo sul Lago</h3>
+                            <p class="event-meta">
+                                <span class="event-date">15 Luglio 2025</span> |
+                                <span class="event-location">Lago di Como, Italia</span>
+                            </p>
+                            <p>Un tour panoramico mozzafiato lungo le rive del Lago di Como, con sosta per un pranzo esclusivo in una villa storica. Un'occasione imperdibile per ammirare paesaggi incantevoli e auto d'epoca.</p>
+                            <button class="btn btn-primary open-modal" data-event-id="1" data-event-name="Raduno Estivo sul Lago">Iscriviti all'Evento</button>
+                        </div>
+                    </div>
+
+                    <div class="event-item" id="event-2">
+                        <img src="https://images.pexels.com/photos/100656/pexels-photo-100656.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Mostra Auto d'Epoca in Città" class="event-item-image">
+                        <div class="event-item-content">
+                            <h3>Mostra Auto d'Epoca in Città</h3>
+                            <p class="event-meta">
+                                <span class="event-date">22 Settembre 2025</span> |
+                                <span class="event-location">Piazza Duomo, Milano</span>
+                            </p>
+                            <p>Esposizione delle più belle auto storiche nel cuore della città, aperta al pubblico e ai soci. Sarà un'occasione per ammirare modelli rari e iconici, con la possibilità di incontrare i proprietari e scambiare aneddoti.</p>
+                            <button class="btn btn-primary open-modal" data-event-id="2" data-event-name="Mostra Auto d'Epoca in Città">Iscriviti all'Evento</button>
+                        </div>
+                    </div>
+
+                    <div class="event-item" id="event-3">
+                        <img src="https://images.pexels.com/photos/100656/pexels-photo-100656.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Tour Panoramico in Toscana" class="event-item-image">
+                        <div class="event-item-content">
+                            <h3>Tour Panoramico in Toscana</h3>
+                            <p class="event-meta">
+                                <span class="event-date">10 Ottobre 2025</span> |
+                                <span class="event-location">Chianti, Toscana</span>
+                            </p>
+                            <p>Un'esperienza indimenticabile tra le colline del Chianti, con degustazioni di prodotti tipici e visite a borghi medievali. Un connubio perfetto tra paesaggi, sapori e motori d'epoca.</p>
+                            <button class="btn btn-primary open-modal" data-event-id="3" data-event-name="Tour Panoramico in Toscana">Iscriviti all'Evento</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modal per l'iscrizione all'evento -->
+        <div id="event-signup-modal" class="modal">
+            <div class="modal-content bg-surface rounded-lg shadow-xl">
+                <span class="close-button">&times;</span>
+                <h2>Iscrizione Evento: <span id="modal-event-name"></span></h2>
+                <form action="YOUR_FORMSPREE_OR_NETLIFY_FORM_ENDPOINT" method="POST" class="event-signup-form">
+                    <input type="hidden" name="event_id" id="modal-event-id">
+                    <input type="hidden" name="event_name" id="modal-event-name-hidden">
+                    <div class="form-group">
+                        <label for="member_name">Nome Completo</label>
+                        <input type="text" id="member_name" name="member_name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="member_email">Email</label>
+                        <input type="email" id="member_email" name="member_email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="member_car_model">Modello Auto (opzionale)</label>
+                        <input type="text" id="member_car_model" name="member_car_model">
+                    </div>
+                    <div class="form-group">
+                        <label for="member_notes">Note (opzionale)</label>
+                        <textarea id="member_notes" name="member_notes" rows="3"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-full">Conferma Iscrizione</button>
+                </form>
+                <p class="form-note mt-4">
+                    Per l'invio del modulo, dovrai configurare un servizio come <a href="https://formspree.io/" target="_blank" rel="noopener noreferrer">Formspree</a> o <a href="https://www.netlify.com/products/forms/" target="_blank" rel="noopener noreferrer">Netlify Forms</a>. Sostituisci "YOUR_FORMSPREE_OR_NETLIFY_FORM_ENDPOINT" con l'URL fornito dal servizio scelto.
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Vintage Wheels Club</h3>
+                    <p>La tua passione per le auto storiche inizia qui.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><img src="https://img.icons8.com/ios-filled/24/ffffff/facebook-new.png" alt="Facebook"></a>
+                        <a href="#" aria-label="Instagram"><img src="https://img.icons8.com/ios-filled/24/ffffff/instagram-new.png" alt="Instagram"></a>
+                        <a href="#" aria-label="Twitter"><img src="https://img.icons8.com/ios-filled/24/ffffff/twitterx--v1.png" alt="Twitter"></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Link Utili</h3>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="about.html">Chi Siamo</a></li>
+                        <li><a href="gallery.html">Galleria</a></li>
+                        <li><a href="events.html">Eventi</a></li>
+                        <li><a href="contact.html">Contatti</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contatti</h3>
+                    <p>Email: info@vintagewheels.it</p>
+                    <p>Telefono: +39 0123 456789</p>
+                    <p>Indirizzo: Via delle Auto, 10 - 00100 Roma, Italia</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Vintage Wheels Club. Tutti i diritti riservati.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="../js/main.js"></script>
+</body>
+</html>

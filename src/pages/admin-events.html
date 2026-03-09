@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vintage Wheels Club - Admin Eventi</title>
+    <link rel="stylesheet" href="../scss/style.scss">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <a href="../index.html" class="logo">Vintage Wheels Club</a>
+            <nav class="nav">
+                <button class="nav-toggle" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-list">
+                    <li><a href="../index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">Chi Siamo</a></li>
+                    <li><a href="gallery.html" class="nav-link">Galleria</a></li>
+                    <li><a href="events.html" class="nav-link">Eventi</a></li>
+                    <li><a href="contact.html" class="nav-link">Contatti</a></li>
+                    <li><a href="admin-events.html" class="nav-link active">Admin Eventi</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-hero bg-surface">
+            <div class="container">
+                <h1 class="page-title">Pannello Amministrativo Eventi</h1>
+                <p class="page-subtitle">Gestisci e crea nuovi eventi per il club.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="admin-panel bg-surface p-8 rounded-lg shadow-xl">
+                    <h2>Crea un Nuovo Evento</h2>
+                    <p class="text-textSecondary mb-6">
+                        Questa è una sezione di esempio per la creazione di eventi. Per una funzionalità completa, sarebbe necessario un backend per l'autenticazione degli utenti e la gestione dei dati degli eventi.
+                    </p>
+                    <form class="event-creation-form">
+                        <div class="form-group">
+                            <label for="event-title">Titolo Evento</label>
+                            <input type="text" id="event-title" name="event-title" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="event-date">Data Evento</label>
+                            <input type="date" id="event-date" name="event-date" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="event-location">Luogo Evento</label>
+                            <input type="text" id="event-location" name="event-location" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="event-description">Descrizione</label>
+                            <textarea id="event-description" name="event-description" rows="6" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="event-image">URL Immagine (Pexels)</label>
+                            <input type="url" id="event-image" name="event-image" placeholder="Es: https://images.pexels.com/photos/..." required>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-full">Crea Evento (Placeholder)</button>
+                    </form>
+                    <div class="mt-8 p-4 bg-border rounded-md text-textSecondary">
+                        <p><strong>Nota:</strong> Questo modulo è solo a scopo dimostrativo. L'invio non salverà i dati senza un backend configurato.</p>
+                        <p>Per implementare la creazione di eventi da parte di utenti autorizzati, avresti bisogno di:</p>
+                        <ul>
+                            <li>Un sistema di autenticazione (es. Supabase Auth).</li>
+                            <li>Un database (es. Supabase Database) per salvare i dettagli degli eventi.</li>
+                            <li>API per creare, leggere, aggiornare ed eliminare eventi.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Vintage Wheels Club</h3>
+                    <p>La tua passione per le auto storiche inizia qui.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><img src="https://img.icons8.com/ios-filled/24/ffffff/facebook-new.png" alt="Facebook"></a>
+                        <a href="#" aria-label="Instagram"><img src="https://img.icons8.com/ios-filled/24/ffffff/instagram-new.png" alt="Instagram"></a>
+                        <a href="#" aria-label="Twitter"><img src="https://img.icons8.com/ios-filled/24/ffffff/twitterx--v1.png" alt="Twitter"></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Link Utili</h3>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="about.html">Chi Siamo</a></li>
+                        <li><a href="gallery.html">Galleria</a></li>
+                        <li><a href="events.html">Eventi</a></li>
+                        <li><a href="contact.html">Contatti</a></li>
+                        <li><a href="admin-events.html">Admin Eventi</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contatti</h3>
+                    <p>Email: info@vintagewheels.it</p>
+                    <p>Telefono: +39 0123 456789</p>
+                    <p>Indirizzo: Via delle Auto, 10 - 00100 Roma, Italia</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Vintage Wheels Club. Tutti i diritti riservati.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="../js/main.js"></script>
+</body>
+</html>

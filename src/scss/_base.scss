@@ -1,0 +1,228 @@
+// Color Palette
+$primary: #9E7FFF;
+$secondary: #38bdf8;
+$accent: #f472b6;
+$background: #171717;
+$surface: #262626;
+$text: #FFFFFF;
+$textSecondary: #A3A3A3;
+$border: #2F2F2F;
+$success: #10b981;
+$warning: #f59e0b;
+$error: #ef4444;
+
+// Typography
+$font-sans: 'Inter', sans-serif;
+$font-serif: 'Playfair Display', serif;
+
+// Spacing
+$spacing-unit: 8px;
+
+// Border Radius
+$border-radius-sm: 4px;
+$border-radius-md: 8px;
+$border-radius-lg: 16px;
+
+// Mixins
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin transition-ease {
+    transition: all 0.3s ease-in-out;
+}
+
+// Base Styles
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: $font-sans;
+    line-height: 1.6;
+    color: $text;
+    background-color: $background;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 $spacing-unit * 3; // 24px
+}
+
+a {
+    color: $primary;
+    text-decoration: none;
+    @include transition-ease;
+
+    &:hover {
+        color: lighten($primary, 10%);
+    }
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $font-serif;
+    color: $text;
+    margin-bottom: $spacing-unit * 2; // 16px
+    line-height: 1.2;
+}
+
+h1 { font-size: 3.5rem; } // 56px
+h2 { font-size: 2.8rem; } // 44.8px
+h3 { font-size: 2.2rem; } // 35.2px
+h4 { font-size: 1.8rem; } // 28.8px
+h5 { font-size: 1.5rem; } // 24px
+h6 { font-size: 1.2rem; } // 19.2px
+
+p {
+    margin-bottom: $spacing-unit * 2; // 16px
+    font-size: 1.125rem; // 18px
+    color: $textSecondary;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+li {
+    margin-bottom: $spacing-unit;
+    color: $textSecondary;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.section {
+    padding: $spacing-unit * 10 0; // 80px
+    position: relative;
+    overflow: hidden;
+
+    @media (max-width: 768px) {
+        padding: $spacing-unit * 6 0; // 48px
+    }
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: $spacing-unit * 3; // 24px
+    font-size: 3rem;
+    color: $primary;
+
+    @media (max-width: 768px) {
+        font-size: 2.2rem;
+    }
+}
+
+.section-description {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto $spacing-unit * 6; // 48px
+    font-size: 1.25rem; // 20px
+    color: $textSecondary;
+
+    @media (max-width: 768px) {
+        font-size: 1rem;
+        margin-bottom: $spacing-unit * 4; // 32px
+    }
+}
+
+.text-center {
+    text-align: center;
+}
+
+.mt-4 { margin-top: $spacing-unit * 4; } // 32px
+.mt-8 { margin-top: $spacing-unit * 8; } // 64px
+.mb-6 { margin-bottom: $spacing-unit * 6; } // 48px
+
+.p-8 { padding: $spacing-unit * 8; } // 64px
+
+.rounded-lg { border-radius: $border-radius-lg; }
+.rounded-md { border-radius: $border-radius-md; }
+.shadow-lg { box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); }
+.shadow-xl { box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); }
+.shadow-md { box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); }
+
+.bg-surface {
+    background-color: $surface;
+}
+
+.bg-border {
+    background-color: $border;
+}
+
+.w-full {
+    width: 100%;
+}
+
+// Utility classes for content grids
+.content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: $spacing-unit * 8; // 64px
+    align-items: center;
+
+    @media (max-width: 992px) {
+        grid-template-columns: 1fr;
+        gap: $spacing-unit * 6; // 48px
+    }
+
+    &.reverse {
+        .content-text {
+            order: 2;
+            @media (max-width: 992px) {
+                order: 1;
+            }
+        }
+        .content-image {
+            order: 1;
+            @media (max-width: 992px) {
+                order: 2;
+            }
+        }
+    }
+
+    .content-text {
+        h2 {
+            font-size: 2.5rem;
+            color: $primary;
+            margin-bottom: $spacing-unit * 3;
+        }
+        p {
+            margin-bottom: $spacing-unit * 2;
+        }
+        ul {
+            list-style: disc;
+            padding-left: $spacing-unit * 4;
+            margin-bottom: $spacing-unit * 4;
+            li {
+                margin-bottom: $spacing-unit;
+                color: $textSecondary;
+                strong {
+                    color: $text;
+                }
+            }
+        }
+    }
+
+    .content-image {
+        img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+    }
+}

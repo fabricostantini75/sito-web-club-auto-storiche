@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vintage Wheels Club - Galleria</title>
+    <link rel="stylesheet" href="../scss/style.scss">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <a href="../index.html" class="logo">Vintage Wheels Club</a>
+            <nav class="nav">
+                <button class="nav-toggle" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-list">
+                    <li><a href="../index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">Chi Siamo</a></li>
+                    <li><a href="gallery.html" class="nav-link active">Galleria</a></li>
+                    <li><a href="events.html" class="nav-link">Eventi</a></li>
+                    <li><a href="contact.html" class="nav-link">Contatti</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-hero bg-surface">
+            <div class="container">
+                <h1 class="page-title">La Nostra Galleria Fotografica</h1>
+                <p class="page-subtitle">Un'immersione visiva nel mondo affascinante delle auto storiche.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="gallery-filters">
+                    <button class="btn btn-secondary active" data-filter="all">Tutto</button>
+                    <button class="btn btn-secondary" data-filter="raduni">Raduni</button>
+                    <button class="btn btn-secondary" data-filter="mostre">Mostre</button>
+                    <button class="btn btn-secondary" data-filter="classiche">Classiche</button>
+                    <button class="btn btn-secondary" data-filter="sportive">Sportive</button>
+                </div>
+
+                <div class="gallery-grid">
+                    <div class="gallery-item" data-category="raduni classiche">
+                        <img src="https://images.pexels.com/photos/100656/pexels-photo-100656.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Auto d'epoca rossa" class="rounded-lg shadow-md">
+                        <div class="gallery-item-overlay">
+                            <h3>Eleganza Italiana</h3>
+                            <p>Raduno sul Lago di Garda</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="mostre sportive">
+                        <img src="https://images.pexels.com/photos/100656/pexels-photo-100656.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Auto sportiva d'epoca" class="rounded-lg shadow-md">
+                        <div class="gallery-item-overlay">
+                            <h3>Potenza e Stile</h3>
+                            <p>Mostra di auto sportive</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="classiche raduni">
+                        <img src="https://images.pexels.com/photos/100656/pexels-photo-100656.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Auto d'epoca blu" class="rounded-lg shadow-md">
+                        <div class="gallery-item-overlay">
+                            <h3>Blu Profondo</h3>
+                            <p>Passeggiata tra i colli</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="mostre">
+                        <img src="https://images.pexels.com/photos/100656/pexels-photo-100656.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Interni auto d'epoca" class="rounded-lg shadow-md">
+                        <div class="gallery-item-overlay">
+                            <h3>Dettagli Artigianali</h3>
+                            <p>Interni di un capolavoro</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="sportive raduni">
+                        <img src="https://images.pexels.com/photos/100656/pexels-photo-100656.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Auto sportiva gialla" class="rounded-lg shadow-md">
+                        <div class="gallery-item-overlay">
+                            <h3>Spirito Racing</h3>
+                            <p>Giro in pista d'epoca</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="classiche mostre">
+                        <img src="https://images.pexels.com/photos/100656/pexels-photo-100656.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Auto d'epoca verde" class="rounded-lg shadow-md">
+                        <div class="gallery-item-overlay">
+                            <h3>Verde Speranza</h3>
+                            <p>Esposizione al Castello</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="raduni">
+                        <img src="https://images.pexels.com/photos/100656/pexels-photo-100656.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Gruppo di auto d'epoca" class="rounded-lg shadow-md">
+                        <div class="gallery-item-overlay">
+                            <h3>Convoglio Storico</h3>
+                            <p>Raduno annuale del club</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="mostre">
+                        <img src="https://images.pexels.com/photos/100656/pexels-photo-100656.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Dettaglio faro auto d'epoca" class="rounded-lg shadow-md">
+                        <div class="gallery-item-overlay">
+                            <h3>Sguardo nel Passato</h3>
+                            <p>Dettagli che fanno la storia</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="classiche">
+                        <img src="https://images.pexels.com/photos/100656/pexels-photo-100656.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Auto d'epoca bianca" class="rounded-lg shadow-md">
+                        <div class="gallery-item-overlay">
+                            <h3>Pura Eleganza</h3>
+                            <p>Un classico senza tempo</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Vintage Wheels Club</h3>
+                    <p>La tua passione per le auto storiche inizia qui.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><img src="https://img.icons8.com/ios-filled/24/ffffff/facebook-new.png" alt="Facebook"></a>
+                        <a href="#" aria-label="Instagram"><img src="https://img.icons8.com/ios-filled/24/ffffff/instagram-new.png" alt="Instagram"></a>
+                        <a href="#" aria-label="Twitter"><img src="https://img.icons8.com/ios-filled/24/ffffff/twitterx--v1.png" alt="Twitter"></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Link Utili</h3>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="about.html">Chi Siamo</a></li>
+                        <li><a href="gallery.html">Galleria</a></li>
+                        <li><a href="events.html">Eventi</a></li>
+                        <li><a href="contact.html">Contatti</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contatti</h3>
+                    <p>Email: info@vintagewheels.it</p>
+                    <p>Telefono: +39 0123 456789</p>
+                    <p>Indirizzo: Via delle Auto, 10 - 00100 Roma, Italia</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Vintage Wheels Club. Tutti i diritti riservati.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="../js/main.js"></script>
+</body>
+</html>

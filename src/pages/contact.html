@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vintage Wheels Club - Contatti</title>
+    <link rel="stylesheet" href="../scss/style.scss">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <a href="../index.html" class="logo">Vintage Wheels Club</a>
+            <nav class="nav">
+                <button class="nav-toggle" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-list">
+                    <li><a href="../index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">Chi Siamo</a></li>
+                    <li><a href="gallery.html" class="nav-link">Galleria</a></li>
+                    <li><a href="events.html" class="nav-link">Eventi</a></li>
+                    <li><a href="contact.html" class="nav-link active">Contatti</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-hero bg-surface">
+            <div class="container">
+                <h1 class="page-title">Contattaci</h1>
+                <p class="page-subtitle">Siamo qui per rispondere a tutte le tue domande e curiosità.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container contact-grid">
+                <div class="contact-info">
+                    <h2>Informazioni di Contatto</h2>
+                    <p>Non esitare a contattarci per qualsiasi informazione sul club, gli eventi o le auto storiche. Il nostro team è sempre disponibile ad aiutarti.</p>
+                    <ul class="contact-details">
+                        <li><strong>Email:</strong> <a href="mailto:info@vintagewheels.it">info@vintagewheels.it</a></li>
+                        <li><strong>Telefono:</strong> <a href="tel:+390123456789">+39 0123 456789</a></li>
+                        <li><strong>Indirizzo:</strong> Via delle Auto, 10 - 00100 Roma, Italia</li>
+                        <li><strong>Orari:</strong> Lun-Ven: 9:00 - 18:00</li>
+                    </ul>
+                    <div class="social-links mt-4">
+                        <a href="#" aria-label="Facebook"><img src="https://img.icons8.com/ios-filled/24/ffffff/facebook-new.png" alt="Facebook"></a>
+                        <a href="#" aria-label="Instagram"><img src="https://img.icons8.com/ios-filled/24/ffffff/instagram-new.png" alt="Instagram"></a>
+                        <a href="#" aria-label="Twitter"><img src="https://img.icons8.com/ios-filled/24/ffffff/twitterx--v1.png" alt="Twitter"></a>
+                    </div>
+                </div>
+                <div class="contact-form-container bg-surface p-8 rounded-lg shadow-lg">
+                    <h2>Inviaci un Messaggio</h2>
+                    <form action="YOUR_FORMSPREE_OR_NETLIFY_FORM_ENDPOINT" method="POST" class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Nome Completo</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Oggetto</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Messaggio</label>
+                            <textarea id="message" name="message" rows="6" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-full">Invia Messaggio</button>
+                    </form>
+                    <p class="form-note mt-4">
+                        Per l'invio del modulo, dovrai configurare un servizio come <a href="https://formspree.io/" target="_blank" rel="noopener noreferrer">Formspree</a> o <a href="https://www.netlify.com/products/forms/" target="_blank" rel="noopener noreferrer">Netlify Forms</a>. Sostituisci "YOUR_FORMSPREE_OR_NETLIFY_FORM_ENDPOINT" con l'URL fornito dal servizio scelto.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section map-section">
+            <div class="container">
+                <h2>Dove Trovarci</h2>
+                <div class="map-placeholder rounded-lg shadow-lg">
+                    <!-- Placeholder per Google Maps o altra mappa -->
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2969.9000000000005!2d12.4922309!3d41.9027835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132f6196f5f0f0f1%3A0x132f6196f5f0f0f1!2sColosseo!5e0!3m2!1sit!2sit!4v1678901234567!5m2!1sit!2sit" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Vintage Wheels Club</h3>
+                    <p>La tua passione per le auto storiche inizia qui.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><img src="https://img.icons8.com/ios-filled/24/ffffff/facebook-new.png" alt="Facebook"></a>
+                        <a href="#" aria-label="Instagram"><img src="https://img.icons8.com/ios-filled/24/ffffff/instagram-new.png" alt="Instagram"></a>
+                        <a href="#" aria-label="Twitter"><img src="https://img.icons8.com/ios-filled/24/ffffff/twitterx--v1.png" alt="Twitter"></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Link Utili</h3>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="about.html">Chi Siamo</a></li>
+                        <li><a href="gallery.html">Galleria</a></li>
+                        <li><a href="events.html">Eventi</a></li>
+                        <li><a href="contact.html">Contatti</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contatti</h3>
+                    <p>Email: info@vintagewheels.it</p>
+                    <p>Telefono: +39 0123 456789</p>
+                    <p>Indirizzo: Via delle Auto, 10 - 00100 Roma, Italia</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Vintage Wheels Club. Tutti i diritti riservati.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="../js/main.js"></script>
+</body>
+</html>
