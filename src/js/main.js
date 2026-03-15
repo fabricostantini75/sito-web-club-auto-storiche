@@ -1,3 +1,5 @@
+import '../scss/style.scss'; // Importa il file SCSS qui
+
 document.addEventListener('DOMContentLoaded', () => {
     // Mobile Navigation Toggle
     const navToggle = document.querySelector('.nav-toggle');
